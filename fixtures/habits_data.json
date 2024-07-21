@@ -1,0 +1,261 @@
+[
+  {
+    "model": "habits.action",
+    "pk": 1,
+    "fields": {
+      "title": "Выпить 1 стакан теплой воды",
+      "type_action": "pleasant",
+      "user": 1
+    }
+  },
+  {
+    "model": "habits.action",
+    "pk": 2,
+    "fields": {
+      "title": "Сделать 10 приседаний",
+      "type_action": "useful",
+      "user": 2
+    }
+  },
+  {
+    "model": "habits.action",
+    "pk": 3,
+    "fields": {
+      "title": "Выполнить планку 1 минуту",
+      "type_action": "useful",
+      "user": 3
+    }
+  },
+  {
+    "model": "habits.action",
+    "pk": 4,
+    "fields": {
+      "title": "Выполнить 10 отжиманий лежа",
+      "type_action": "useful",
+      "user": 4
+    }
+  },
+  {
+    "model": "habits.action",
+    "pk": 5,
+    "fields": {
+      "title": "Вовремя лечь спать",
+      "type_action": "useful",
+      "user": 1
+    }
+  },
+  {
+    "model": "habits.action",
+    "pk": 6,
+    "fields": {
+      "title": "Сделать маску для лица",
+      "type_action": "award",
+      "user": 2
+    }
+  },
+  {
+    "model": "habits.action",
+    "pk": 7,
+    "fields": {
+      "title": "Съесть яблоко",
+      "type_action": "pleasant",
+      "user": 3
+    }
+  },
+  {
+    "model": "habits.action",
+    "pk": 8,
+    "fields": {
+      "title": "Съесть апельсин",
+      "type_action": "pleasant",
+      "user": 4
+    }
+  },
+  {
+    "model": "habits.habit",
+    "pk": 1,
+    "fields": {
+      "user": 2,
+      "action": 2,
+      "is_pleasant": false,
+      "link_action": null,
+      "award": null,
+      "space": "Любое",
+      "time": "08:00:00",
+      "periodicity": 7,
+      "runtime": "00:02:00",
+      "is_public": true,
+      "last_date": null
+    }
+  },
+  {
+    "model": "habits.habit",
+    "pk": 2,
+    "fields": {
+      "user": 2,
+      "action": 1,
+      "is_pleasant": false,
+      "link_action": null,
+      "award": null,
+      "space": "Дом",
+      "time": "06:30:00",
+      "periodicity": 7,
+      "runtime": "00:02:00",
+      "is_public": true,
+      "last_date": null
+    }
+  },
+  {
+    "model": "habits.habit",
+    "pk": 3,
+    "fields": {
+      "user": 2,
+      "action": 3,
+      "is_pleasant": false,
+      "link_action": 7,
+      "award": null,
+      "space": "Дом",
+      "time": "20:00:00",
+      "periodicity": 3,
+      "runtime": "00:02:00",
+      "is_public": false,
+      "last_date": null
+    }
+  },
+  {
+    "model": "habits.habit",
+    "pk": 4,
+    "fields": {
+      "user": 2,
+      "action": 5,
+      "is_pleasant": false,
+      "link_action": null,
+      "award": null,
+      "space": "Дом",
+      "time": "22:30:00",
+      "periodicity": 7,
+      "runtime": "00:02:00",
+      "is_public": true,
+      "last_date": null
+    }
+  },
+  {
+    "model": "habits.habit",
+    "pk": 5,
+    "fields": {
+      "user": 2,
+      "action": 7,
+      "is_pleasant": true,
+      "link_action": null,
+      "award": null,
+      "space": "Любое",
+      "time": "20:05:00",
+      "periodicity": 3,
+      "runtime": "00:02:00",
+      "is_public": false,
+      "last_date": null
+    }
+  },
+  {
+    "model": "habits.habit",
+    "pk": 6,
+    "fields": {
+      "user": 3,
+      "action": 1,
+      "is_pleasant": false,
+      "link_action": null,
+      "award": null,
+      "space": "Дом",
+      "time": "06:15:00",
+      "periodicity": 7,
+      "runtime": "00:02:00",
+      "is_public": false,
+      "last_date": null
+    }
+  },
+  {
+    "model": "habits.habit",
+    "pk": 7,
+    "fields": {
+      "user": 3,
+      "action": 4,
+      "is_pleasant": false,
+      "link_action": 8,
+      "award": null,
+      "space": "Дом",
+      "time": "07:00:00",
+      "periodicity": 3,
+      "runtime": "00:02:00",
+      "is_public": true,
+      "last_date": null
+    }
+  },
+  {
+    "model": "habits.habit",
+    "pk": 8,
+    "fields": {
+      "user": 3,
+      "action": 8,
+      "is_pleasant": true,
+      "link_action": null,
+      "award": null,
+      "space": "Дом",
+      "time": "07:05:00",
+      "periodicity": 3,
+      "runtime": "00:02:00",
+      "is_public": false,
+      "last_date": null
+    }
+  },
+  {
+    "model": "habits.habit",
+    "pk": 9,
+    "fields": {
+      "user": 4,
+      "action": 2,
+      "is_pleasant": false,
+      "link_action": 7,
+      "award": null,
+      "space": "Дом",
+      "time": "07:00:00",
+      "periodicity": 7,
+      "runtime": "00:02:00",
+      "is_public": true,
+      "last_date": null
+    }
+  },
+  {
+    "model": "habits.habit",
+    "pk": 10,
+    "fields": {
+      "user": 4,
+      "action": 3,
+      "is_pleasant": false,
+      "link_action": null,
+      "award": 6,
+      "space": "Дом",
+      "time": "19:00:00",
+      "periodicity": 7,
+      "runtime": "00:02:00",
+      "is_public": true,
+      "last_date": null
+    }
+  },
+  {
+    "model": "habits.habit",
+    "pk": 11,
+    "fields": {
+      "user": 4,
+      "action": 7,
+      "is_pleasant": true,
+      "link_action": null,
+      "award": null,
+      "space": "Дом",
+      "time": "07:15:00",
+      "periodicity": 7,
+      "runtime": "00:02:00",
+      "is_public": false,
+      "last_date": null
+    }
+  }
+]
