@@ -151,7 +151,7 @@ REST_FRAMEWORK = {
     ],
     # Установка политики разрешений глобально
     'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.AllowAny',
+        'rest_framework.permissions.IsAuthenticated',
     ],
     # Документирование
     # 'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema',
@@ -181,18 +181,18 @@ CSRF_TRUSTED_ORIGINS = [
     'https://read-and-write.example.com',
 ]
 
-CELERY_TIMEZONE = TIME_ZONE
-CELERY_TASK_TRACK_STARTED = True
-CELERY_TASK_TIME_LIMIT = 30 * 60
-CELERY_BROKER_URL = os.getenv('CELERY_BROKER_URL')
-CELERY_RESULT_BACKEND = os.getenv('CELERY_RESULT_BACKEND')
-CELERY_BEAT_SCHEDULER = 'django_celery_beat.schedulers:DatabaseScheduler'
-# CELERY_BEAT_SCHEDULE = {
-#     'check_activity_user': {
-#         'task': 'users.tasks.check_activity_user',
-#         'schedule': timedelta(seconds=10),
-#     },
-# }
+#CELERY_TIMEZONE = TIME_ZONE
+#CELERY_TASK_TRACK_STARTED = True
+#CELERY_TASK_TIME_LIMIT = 30 * 60
+#CELERY_BROKER_URL = os.getenv('CELERY_BROKER_URL')
+#CELERY_RESULT_BACKEND = os.getenv('CELERY_RESULT_BACKEND')
+#CELERY_BEAT_SCHEDULER = 'django_celery_beat.schedulers:DatabaseScheduler'
+#CELERY_BEAT_SCHEDULE = {
+#    'send_notify_habit_tg': {
+ #       'task': 'habits.tasks.send_notify_habit_tg',
+ #       'schedule': timedelta(seconds=10),
+   # },
+#}
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 # EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
@@ -205,3 +205,6 @@ EMAIL_HOST_PASSWORD = os.getenv('HOST_PASSWORD')
 EMAIL_SERVER = EMAIL_HOST_USER
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 EMAIL_ADMIN = EMAIL_HOST_USER
+
+TELEGRAM_TOKEN = os.getenv("TELEGRAM_TOKEN")
+TELEGRAM_URL = os.getenv("TELEGRAM_URL")
