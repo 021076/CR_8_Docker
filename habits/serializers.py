@@ -3,9 +3,6 @@ from habits.models import Action, Habit
 from habits.validators import MutuallyExclusiveFieldsValidator, PeriodicityValidator, RunTimeValidator
 
 
-# , PeriodicityValidator)
-# RunTimeValidator,
-
 class ActionSerializer(serializers.ModelSerializer):
     class Meta:
         model = Action

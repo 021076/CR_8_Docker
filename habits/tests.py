@@ -90,7 +90,7 @@ class HabitsAPITestCase(APITestCase):
             title='Тестовое действие', type_action='useful', user=self.user)
         self.habit = Habit.objects.create(action=self.action, space='Дом', time='08:00:00', periodicity=3,
                                           runtime='00:02:00', is_public=True,
-                                          last_date='2024-07-19T19:00:00+05:00', user=self.user)
+                                          next_date='2024-07-19T19:00:00+05:00', user=self.user)
 
     def test_habit_create(self):
         """Юниттест создания привычки"""
@@ -100,7 +100,7 @@ class HabitsAPITestCase(APITestCase):
                      'periodicity': 7,
                      'runtime': '00:02:00',
                      'is_public': True,
-                     'last_date': '2024-07-19T19:00:00+05:00',
+                     'next_date': '2024-07-19T19:00:00+05:00',
                      'user': self.user.pk}
         create_response = self.client.post('/habits/habit/create/', db_create)
         print(f'лог создания привычки: {create_response, create_response.json()}')
@@ -132,7 +132,7 @@ class HabitsAPITestCase(APITestCase):
         self.assertEqual(detail_response.data['space'], 'Дом')
         self.assertEqual(detail_response.data['time'], '08:00:00')
         self.assertEqual(detail_response.data['runtime'], '00:02:00')
-        self.assertEqual(detail_response.data['last_date'], '2024-07-19T19:00:00+05:00')
+        self.assertEqual(detail_response.data['next_date'], '2024-07-19T19:00:00+05:00')
         print('-' * 20)
 
     def test_habit_delete(self):
@@ -152,7 +152,7 @@ class HabitsAPITestCase(APITestCase):
             'periodicity': 3,
             'runtime': '00:02:00',
             'is_public': True,
-            'last_date': '2024-07-19T19:00:00+05:00',
+            'next_date': '2024-07-19T19:00:00+05:00',
             'user': self.user.pk
         }
         url = reverse("habits:habit_update", kwargs={'pk': self.habit.pk})

@@ -10,5 +10,4 @@ class ActionAdmin(admin.ModelAdmin):
 @admin.register(Habit)
 class HabitAdmin(admin.ModelAdmin):
     list_display = (
-        'id', 'user', 'action', 'is_pleasant', 'link_action', 'award', 'space', 'time', 'periodicity', 'runtime',
-        'is_public',)
+        'id', 'user', 'action',)

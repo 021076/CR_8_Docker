@@ -33,10 +33,10 @@ class Habit(models.Model):
     space = models.CharField(max_length=150, verbose_name='Место')
     time = models.TimeField(verbose_name='Время выполнения')
     periodicity = models.PositiveIntegerField(verbose_name='Периодичность выполнения',
-                                              help_text='Количество выполнений - количество дней в неделю (например: 1 - один раз в неделю, 7 - каждый день)')
+                                              help_text='1 - каждый день, 2 - 1 раз в два дня и т.д., но не менее 1 раза в 7 дней')
     runtime = models.DurationField(verbose_name='Время на выполнение')
     is_public = models.BooleanField(verbose_name='Публичность')
-    last_date = models.DateTimeField(verbose_name='Дата последнего выполнения', **NULLABLE)
+    next_date = models.DateTimeField(verbose_name='Дата следующего выполнения', **NULLABLE)
 
     def __str__(self):
         return {self.action}

@@ -1,5 +1,8 @@
+import pytz
+from datetime import datetime, timedelta
 from rest_framework import viewsets, generics
 from rest_framework.permissions import IsAuthenticated, IsAuthenticatedOrReadOnly
+from config import settings
 from habits.models import Action, Habit
 from habits.paginators import HabitPagination
 from habits.serializers import ActionSerializer, HabitSerializer
@@ -37,9 +40,18 @@ class HabitCreateAPIView(generics.CreateAPIView):
     permission_classes = [IsAuthenticated, ]
 
     def perform_create(self, serializer):
-        """Переопределение метода create, владельцем становится авторизованный пользователь создающий привычку"""
+        """Переопределение метода create:
+        владельцем становится авторизованный пользователь создающий действие
+        дата следующего напоминания = текущая + Периодичность выполнения
+        если создается привычка на приятное действие, чек-бокс is_pleasant = True
+        """
+        timezone = pytz.timezone(settings.TIME_ZONE)
+        date_now = datetime.now(timezone)
         new_habit = serializer.save()
+        new_habit.next_date = date_now + timedelta(days=new_habit.periodicity)
         new_habit.user = self.request.user
+        if new_habit.action in Action.objects.filter(type_action='pleasant'):
+            new_habit.is_pleasant = True
         new_habit.save()
 
 
