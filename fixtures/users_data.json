@@ -1,0 +1,78 @@
+[
+  {
+    "model": "users.user",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$720000$Fsh3bUnbnr87PktjaoTD4j$/a0svD8f6B6zk0o9P2J/mx7gyqTogm7eKWa1bYQgMA8=",
+      "last_login": "2024-07-19T09:40:49.080Z",
+      "is_superuser": true,
+      "first_name": "Admin",
+      "last_name": "SuperUser",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2024-07-19T08:46:49.138Z",
+      "email": "admin@admin.csu",
+      "phone": null,
+      "tg_chat_id": null,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 2,
+    "fields": {
+      "password": "pbkdf2_sha256$720000$fkzMs6CbaTUtW07vNNxiWB$cwev0IXoTb0UyA9oeeeWUMve9fy21gt3jBkb3sJmHN4=",
+      "last_login": null,
+      "is_superuser": false,
+      "first_name": "",
+      "last_name": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2024-07-19T08:48:19Z",
+      "email": "user1@drf.drf",
+      "phone": null,
+      "tg_chat_id": null,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 3,
+    "fields": {
+      "password": "pbkdf2_sha256$720000$pLjFPbyhH5dZ6ET6AkqAXG$DVtAGSEOeF26MbeLnPnKeb+x5elKssrNssoQ2xlAOEk=",
+      "last_login": null,
+      "is_superuser": false,
+      "first_name": "",
+      "last_name": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2024-07-19T14:52:47Z",
+      "email": "user2@drf.drf",
+      "phone": null,
+      "tg_chat_id": null,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 4,
+    "fields": {
+      "password": "pbkdf2_sha256$720000$SaWY8tfPzDSrh1sLJidaSj$P6H9ZLYdl7PBY3mJiRSkXybutbA8DNrMfp6Fztijzvg=",
+      "last_login": null,
+      "is_superuser": false,
+      "first_name": "",
+      "last_name": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2024-07-19T14:52:58Z",
+      "email": "user3@drf.drf",
+      "phone": null,
+      "tg_chat_id": null,
+      "groups": [],
+      "user_permissions": []
+    }
+  }
+]
