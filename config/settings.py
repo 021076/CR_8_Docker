@@ -86,11 +86,11 @@ WSGI_APPLICATION = 'config.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': os.getenv('DB_NAME'),  # Название БД
-        'USER': os.getenv('DB_USER'),  # Пользователь для подключения
-        'PASSWORD': os.getenv('DB_PASSWORD'),  # Пароль для этого пользователя
-        'HOST': os.getenv('DB_HOST'),  # Адрес, на котором развернут сервер БД
-        'PORT': os.getenv('DB_PORT'),  # Порт, на котором работает сервер БД
+        'NAME': os.getenv('POSTGRES_DB'),
+        'USER': os.getenv('POSTGRES_USER'),
+        'PASSWORD': os.getenv('POSTGRES_PASSWORD'),
+        'HOST': os.getenv('POSTGRES_HOST'),
+        'PORT': os.getenv('POSTGRES_PORT'),
     }
 
 }
@@ -193,18 +193,6 @@ CELERY_BEAT_SCHEDULE = {
         'schedule': timedelta(seconds=10),
     },
 }
-
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = os.getenv('HOST')
-EMAIL_PORT = os.getenv('HOST_PORT')
-EMAIL_USE_TLS = os.getenv('HOST_TLS')
-EMAIL_USE_SSL = os.getenv('HOST_SSL')
-EMAIL_HOST_USER = os.getenv('HOST_USER')
-EMAIL_HOST_PASSWORD = os.getenv('HOST_PASSWORD')
-EMAIL_SERVER = EMAIL_HOST_USER
-DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
-EMAIL_ADMIN = EMAIL_HOST_USER
 
 TELEGRAM_TOKEN = os.getenv("TELEGRAM_TOKEN")
 TELEGRAM_URL = os.getenv("TELEGRAM_URL")
